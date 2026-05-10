@@ -1,25 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>SQL AI Assistant</title>
-    <link rel="stylesheet" href="styles.css">
+  <title>AI SQL Generator</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css?v=2">
 </head>
+
 <body>
+  <div class="container">
 
-<div class="chat-container">
+    <h1>🧠 AI SQL Generator</h1>
 
-    <h1>🧠 SQL AI Assistant</h1>
+    <input id="question" placeholder="Ask something like: show users from 2023">
 
-    <div id="chat-box" class="chat-box"></div>
+    <button onclick="generateSQL()">Generate SQL</button>
 
-    <div class="input-area">
-        <textarea id="input" placeholder="Ask for SQL..."></textarea>
-        <button onclick="generateSQL()">Send</button>
-    </div>
+    <div id="sqlBox" class="box"></div>
 
-</div>
+    <button id="copyBtn" onclick="copySQL()">Copy SQL</button>
 
-<script src="app.js"></script>
+    <h3>Results</h3>
+    <div id="results"></div>
+
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
